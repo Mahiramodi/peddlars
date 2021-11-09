@@ -34,16 +34,16 @@ if (login_form) {
 if (register_form) {
     register_form.addEventListener("submit", (e) => {
         e.preventDefault();
-        if (register_form["name"].value != "" && register_form["email"].value != " " &&
-            register_form["password"].value != "" && (register_form["password"].value.length) > 6) {
+        if (register_form["name2"].value != "" && register_form["email2"].value != " " &&
+            register_form["password2"].value != "" && (register_form["password2"].value.length) > 6) {
 
             console.log("submitted")
-            var email = register_form["email"].value;
-            var password = register_form["password"].value
+            var email = register_form["email2"].value;
+            var password = register_form["password2"].value
             createUserWithEmailAndPassword(auth, email, password).then((cred) => {
                 console.log(cred);
                 setDoc(doc(db, "Users", email), {
-                    name: register_form["name"].value,
+                    name: register_form["name2"].value,
                     email: email,
                     status: "clear",
                 });

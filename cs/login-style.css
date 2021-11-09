@@ -129,7 +129,7 @@ section .container .signup-box {
 }
 
 section .container.active .signup-box {
-    pointer-events: intial;
+    pointer-events: initial;
 }
 
 section .container .signup-box .form-box {
