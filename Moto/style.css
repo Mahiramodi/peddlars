@@ -1,14 +1,206 @@
-.white-section{
-    background-color:white
-}
-nav{
-    background-color: white;
-    color: black;
-}
-nav ul li a{
-    color: black;
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #6e6d6d;
 }
 
-nav a{
-color: black;
+.nav-section {
+  background-color: #393e46;
+  color: #fff;
+  width: 100%;
+}
+.navbar-brand {
+  font-family: "Lobster", cursive;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+}
+
+h1 {
+  font-family: "EB Garamond", serif;
+  font-size: 6rem;
+  font-weight: 500;
+  color: #393e46;
+  text-align: center;
+}
+.pool {
+  line-height: 2;
+  font-weight: 400;
+  color: #6e6d6d;
+  padding: 30px 0 30px 0;
+}
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 4rem;
+  font-weight: 650;
+  color: #393e46;
+  padding: 30px 0;
+}
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: 650;
+  color: #393e46;
+  padding-top: 10px;
+}
+p {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #6e6d6d;
+}
+.easy {
+  font-family: "EB Garamond", serif;
+  font-size: 5.5rem;
+  font-weight: 650px;
+  color: #ff7517;
+}
+
+.white-section {
+  color: black;
+  padding-bottom: 50px;
+  width: 100%;
+}
+
+.title-image {
+  height: 85vh;
+  width: 45vw;
+}
+.banner-text {
+  padding: 40px;
+  padding-left: 170px;
+
+  display: grid;
+  place-items: center;
+
+  align-content: center;
+}
+
+.banner-btn button {
+  margin: 0 1rem;
+  background-color: #ff7517;
+  height: 4.5rem;
+  padding: 0 3rem;
+  color: black;
+  border: 0;
+  border-radius: 78px;
+}
+.banner-btn button:nth-child(2) {
+  background-color: #ffb085;
+}
+
+.Features {
+  color: black;
+  justify-content: center;
+  text-align: center;
+  padding: 30px 0;
+  height: 100%;
+  width: 100%;
+}
+
+.feature-box .icon {
+  height: 20rem;
+  width: 22rem;
+}
+.feature-box img {
+  height: 100%;
+  width: 100%;
+}
+.feature-box {
+  height: 100%;
+  padding: 5px;
+  padding-top: 25px;
+}
+.feature-box h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+.feature-box p {
+  font-size: 1rem;
+}
+
+.select {
+  font-size: 65px;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.row {
+  justify-content: center;
+}
+
+.card {
+  padding: 10px;
+  margin: 15px;
+  border: 0;
+  height: 350px;
+  text-align: left;
+}
+
+.rate {
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+#testimonials {
+  display: flex;
+  overflow-x: scroll;
+  width: 100%;
+  justify-content: center;
+  padding: 3%;
+}
+
+::-webkit-scrollbar {
+  display: none;
+
+}
+.test-card {
+  width: 54rem;
+  box-shadow: 12px 13px 5px -1px rgba(107, 101, 101, 0.14);
+  margin-right: 3rem;
+  padding: 3%;
+}
+
+.test-card p {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+footer {
+  justify-content: center;
+  text-align: center;
+  padding: 50px;
+  background-color: #393e46;
+  color: white;
+  height: 200px;
+  width: 100%;
+}
+.big-heading {
+  color: white;
+}
+
+@media (max-width: 770px) {
+  .feature-box .icon {
+    height: 15rem;
+    width: 12rem;
+  }
+}
+
+@media onlyscreen and (min-width: 1024px) {
+  .col-lg-3 {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
 }
