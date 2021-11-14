@@ -45,6 +45,7 @@ onAuthStateChanged(auth, async(user) => {
                         const rideInfo = await getDoc(doc(db, "Rides", addRide.id));
                         console.log(document.querySelector("#qr-reader__dashboard_section_csr").children[1].innerText == "STOP SCANNING");
                         if (document.querySelector("#qr-reader__dashboard_section_csr").children[1].innerText == "START SCANNING") {
+                            console.log(rideInfo.data().scan);
                             if ((flag == false) && (text == "")) {
                                 flag = true;
                                 var hr = currentdate.getHours();
@@ -91,7 +92,7 @@ onAuthStateChanged(auth, async(user) => {
                                 if (hr < 10) {
                                     hr = `${0}${hr}`;
                                 }
-                                var cost;
+                                var cost = 0;
                                 var rideDuration = diff(rideInfo.data().starttime, `${hr}:${min}`)
 
 
@@ -113,6 +114,9 @@ onAuthStateChanged(auth, async(user) => {
                                 })
                                 console.log("End Ride")
                                 console.log(rideInfo.data())
+                            }
+                            if (rideInfo.data().scan > 2) {
+                                document.getElementById("qr-reader").innerHTML = `<h3>Your total price of the ride is &#x20b9; ${rideInfo.data().price}</h3>`
                             }
                         }
                     })
@@ -161,6 +165,8 @@ function diff(start, end) {
     var hours = Math.floor(diff / 1000 / 60 / 60);
     diff -= hours * 1000 * 60 * 60;
     var minutes = Math.floor(diff / 1000 / 60);
-
+    if (minutes < 10 && hours == 0) {
+        minutes = 0;
+    }
     return hours + "." + minutes;
 }

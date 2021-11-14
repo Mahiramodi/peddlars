@@ -21,7 +21,8 @@ if (login_form) {
             .then((userCredential) => {
                 // Signed in 
                 console.log(userCredential.user);
-                alert("Signed In Successfully")
+                alert("Signed In Successfully");
+                window.location.replace("http://127.0.0.1:5500/peddlars/index.html")
                     // ...
             })
             .catch((error) => {

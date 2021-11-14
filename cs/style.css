@@ -1,0 +1,405 @@
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2 rem;
+    color: #6e6d6d;
+}
+
+.nav-section {
+    background-color: #393e46;
+    color: #fff;
+    width: 100%;
+}
+
+.navbar-brand {
+    font-family: "Lobster", cursive;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.nav-item {
+    padding: 0 18px;
+}
+
+.nav-link {
+    font-size: 1.2rem;
+}
+
+.banner-section {
+    color: black;
+    padding-bottom: 5%;
+    width: 100%;
+}
+
+.banner-img img {
+    height: 85vh;
+    width: 100%;
+}
+
+.banner-text {
+    padding: 40px;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    align-content: center;
+}
+
+.banner-text h1 {
+    font-family: "EB Garamond", serif;
+    font-size: 6rem;
+    font-weight: 500;
+    color: #393e46;
+}
+
+.banner-text p {
+    line-height: 2;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2 rem;
+    color: #6e6d6d;
+    padding: 30px 20px 30px 20px;
+}
+
+.banner-text span {
+    font-family: "EB Garamond", serif;
+    font-size: 5.5rem;
+    font-weight: 500;
+    color: #ff7517;
+}
+
+.banner-btn button {
+    margin: 0 1rem;
+    background-color: #ff7517;
+    height: 4.5rem;
+    padding: 0 3rem;
+    color: black;
+    border: 0;
+    border-radius: 78px;
+    font-size: 1.5rem;
+    font-weight: 450;
+}
+
+.banner-btn button:nth-child(2) {
+    background-color: #ffb085;
+}
+
+.steps {
+    padding-bottom: 5%;
+    width: 100%;
+    justify-content: center;
+}
+
+.steps-text {
+    width: 100%;
+    padding-top: 13.5rem;
+}
+
+.steps-text h1 {
+    font-family: "EB Garamond", serif;
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: #393e46;
+    text-align: left;
+    text-decoration: bold;
+}
+
+.steps-text p {
+    padding-top: 2.5%;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+    color: #6e6d6d;
+    text-align: justify;
+}
+
+.steps-ill {
+    justify-content: center;
+    width: 100%;
+}
+
+.steps-ill row {
+    justify-content: center;
+}
+
+.steps-ill .card {
+    margin: 0;
+    border: 0;
+    text-align: left;
+    padding: 0;
+}
+
+.steps-ill .card img {
+    height: 60%;
+    width: 70%;
+}
+
+.steps-ill .card h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    /* display: grid;
+  place-items: center; */
+    font-weight: 650;
+    color: #393e46;
+    text-decoration: bold;
+}
+
+.steps-ill .card .num {
+    display: flex;
+    align-items: center;
+}
+
+.steps-ill .card .num h3 {
+    font-size: 6rem;
+    color: skyblue;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.steps-ill .card p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2 rem;
+    font-weight: 500;
+    color: #6e6d6d;
+    text-align: left;
+    justify-content: center;
+    width: 50%;
+    margin-left: 4%;
+}
+
+.rate {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 5% 3%;
+    text-align: center;
+    background-color: #ff7517;
+    /* transform: skewY(7deg);
+    transform-origin: top right;
+    margin: 0; */
+}
+
+.rate .card {
+    width: 90%;
+    border: solid #222831;
+    border: 0;
+}
+
+.rate .card .card-header {
+    background-color: #393E46;
+    color: white;
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 2% 0;
+}
+
+.rate .card .card-body {
+    background-color: #EEEEEE;
+    color: #222831;
+    text-decoration: bold;
+}
+
+.rate .card .card-title {
+    width: 90%;
+    font-size: 3rem;
+    font-weight: 500;
+    text-decoration: bold;
+}
+
+.rate .card p {
+    font-weight: 500;
+    color: #393E46;
+}
+
+.feedback-title {
+    font-family: "EB Garamond", serif;
+    font-size: 5rem;
+    font-weight: 500;
+    color: #393e46;
+    text-align: center;
+}
+
+#testimonials {
+    display: flex;
+    overflow-x: scroll;
+    width: 100%;
+    justify-content: center;
+    padding: 3%;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.test-card {
+    width: 54rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    margin-right: 3rem;
+    padding: 3%;
+    /* background: #f2f2f2;
+    box-shadow: 16px 16px 32px #d0d0d0, -16px -16px 32px #ffffff; */
+    border-radius: 20px;
+}
+
+.test-card p {
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.test-card img {
+    border-radius: 100%;
+    margin-right: 13px;
+}
+
+.mapQR {
+    display: flex;
+    width: 100%;
+    height: 70vh;
+    padding: 3%;
+}
+
+.mapQR #map {
+    width: 50%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.Qrtxt::before {
+    content: "";
+    position: relative;
+    width: 100%;
+    height: 45%;
+    left: 0;
+    top: 0;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3gW178okqEsZNjtI53GsY0bmyTKQYG2NL6mV9FbrpQ5wEFxAWfdfIgtKKcT3DZFfNacE&usqp=CAU");
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+}
+
+.mapQR .Qrtxt {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mapQR .Qrtxt h2 {
+    font-weight: 600;
+}
+
+.Qrtxt #qr-reader__dashboard_section_swaplink {
+    display: none;
+}
+
+#qr-reader {
+    border: none !important;
+}
+
+.Qrtxt #strbtn {
+    padding: 10px 20px;
+    background: #f8b643;
+    border: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.Qrtxt #strbtn:hover {
+    background-color: white;
+    border: 2px solid #f8b643;
+    color: rgb(43, 41, 41);
+}
+
+#qr-reader a {
+    display: none;
+}
+
+#qr-reader__status_span {
+    display: none;
+}
+
+.modal-footer button {
+    padding: 8px 13px;
+}
+
+.razorpay-payment-button a {
+    background-image: linear-gradient(to right, #FF512F 0%, #F09819 51%, #FF512F 100%) !important;
+}
+
+.razorpay-payment-button a:hover {
+    background-position: right center !important;
+    /* change the direction of the change here */
+    color: #fff !important;
+    text-decoration: none;
+}
+
+.Qrtxt #qr-reader button {
+    border-radius: 20px;
+    border: none;
+    background: linear-gradient(to right, #FF512F 0%, #F09819 51%, #FF512F 100%);
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}
+
+.Qrtxt #qr-reader button:hover {
+    background-color: #ff7517 !important;
+}
+
+footer {
+    justify-content: center;
+    text-align: center;
+    padding: 2% 10%;
+    background-color: #393e46;
+    color: white;
+    width: 100%;
+}
+
+
+/* @media onlyscreen and (min-width: 1024px) {
+  .col-lg-3 {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+} */
+
+@media screen and (max-width:1020px) {
+    .steps-ill .card img {
+        height: 60%;
+        width: 90%;
+    }
+    .mapQR {
+        display: block;
+        height: 100%;
+    }
+    .mapQR #map {
+        width: 100%;
+    }
+    .mapQR .Qrtxt {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:790px) {
+    .mapQR .Qrtxt h2 {
+        font-weight: 600;
+        font-size: 1.3rem;
+    }
+    .steps-text h1 {
+        text-align: center;
+    }
+    .mapQR #map {
+        width: 100%;
+    }
+    .mapQR .Qrtxt {
+        width: 100%;
+    }
+}
