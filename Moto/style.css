@@ -1,10 +1,9 @@
 body {
-  font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
-  font-weight: 600;
-  font-size: 1.2rem;
   line-height: 1.5;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2 rem;
   color: #6e6d6d;
 }
 
@@ -27,63 +26,43 @@ body {
   font-size: 1.2rem;
 }
 
-h1 {
+.banner-section {
+  color: black;
+  padding-bottom: 5%;
+  width: 100%;
+}
+.banner-img img {
+  height: 85vh;
+ 
+  width: 100%;
+}
+.banner-text {
+  padding: 40px;
+  
+  width: 100%;
+  display: grid;
+  place-items: center;
+  align-content: center;
+}
+.banner-text h1 {
   font-family: "EB Garamond", serif;
   font-size: 6rem;
   font-weight: 500;
   color: #393e46;
-  text-align: center;
 }
-.pool {
+.banner-text p {
   line-height: 2;
   font-weight: 400;
-  color: #6e6d6d;
-  padding: 30px 0 30px 0;
-}
-h2 {
   font-family: "Montserrat", sans-serif;
-  font-size: 4rem;
-  font-weight: 650;
-  color: #393e46;
-  padding: 30px 0;
-}
-h3 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 2rem;
-  font-weight: 650;
-  color: #393e46;
-  padding-top: 10px;
-}
-p {
-  font-size: 1.5rem;
-  line-height: 2;
+  font-size: 1.2 rem;
   color: #6e6d6d;
+  padding: 30px 20px 30px 20px;
 }
-.easy {
+.banner-text span {
   font-family: "EB Garamond", serif;
   font-size: 5.5rem;
-  font-weight: 650px;
+  font-weight: 500;
   color: #ff7517;
-}
-
-.white-section {
-  color: black;
-  padding-bottom: 50px;
-  width: 100%;
-}
-
-.title-image {
-  height: 85vh;
-  width: 45vw;
-}
-.banner-text {
-  padding: 40px;
-  padding-left: 170px;
-
-  display: grid;
-  place-items: center;
-
-  align-content: center;
 }
 
 .banner-btn button {
@@ -94,64 +73,135 @@ p {
   color: black;
   border: 0;
   border-radius: 78px;
+  font-size: 1.5rem;
+  font-weight: 450;
 }
 .banner-btn button:nth-child(2) {
   background-color: #ffb085;
 }
 
-.Features {
-  color: black;
-  justify-content: center;
-  text-align: center;
-  padding: 30px 0;
-  height: 100%;
+
+
+.steps {
+  padding-bottom: 5%;
   width: 100%;
-}
-
-.feature-box .icon {
-  height: 20rem;
-  width: 22rem;
-}
-.feature-box img {
-  height: 100%;
-  width: 100%;
-}
-.feature-box {
-  height: 100%;
-  padding: 5px;
-  padding-top: 25px;
-}
-.feature-box h2 {
-  font-size: 1.2rem;
-  margin-bottom: 0;
-}
-.feature-box p {
-  font-size: 1rem;
-}
-
-.select {
-  font-size: 65px;
-  text-align: center;
-  padding-top: 80px;
-}
-
-.row {
   justify-content: center;
+ 
 }
-
-.card {
-  padding: 10px;
-  margin: 15px;
-  border: 0;
-  height: 350px;
+.steps-text {
+  width: 100%;
+  padding-top: 13.5rem;
+}
+.steps-text h1 {
+  font-family: "EB Garamond", serif;
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: #393e46;
   text-align: left;
+  text-decoration: bold;
+}
+.steps-text p {
+  padding-top: 2.5%;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  color: #6e6d6d;
+  text-align: justify;
 }
 
-.rate {
-  margin-bottom: 10px;
-  display: flex;
-  flex-wrap: wrap;
+.steps-ill {
+  justify-content: center;
   width: 100%;
+}
+.steps-ill row {
+  justify-content: center;
+}
+
+.steps-ill .card {
+  margin: 0;
+  border: 0;
+  text-align: left;
+  padding: 0;
+}
+.steps-ill .card img {
+  height: 60%;
+  width: 70%;
+}
+.steps-ill .card h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  /* display: grid;
+  place-items: center; */
+  font-weight: 650;
+  color: #393e46;
+  text-decoration: bold;
+}
+.steps-ill .card .num{
+  display: flex;
+  align-items: center;
+}
+.steps-ill .card .num h3{
+  
+  font-size: 6rem;
+  color:skyblue;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.steps-ill .card p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2 rem;
+  font-weight: 500;
+  color: #6e6d6d;
+  text-align: left;
+  justify-content: center;
+  width: 50%;
+  margin-left: 4%;
+}
+.rate{
+  width: 100%;
+  display: flex;
+  justify-content:space-evenly;
+  flex-wrap:wrap ;
+  padding: 5% 3%;
+text-align: center;
+background-color: #ff7517;
+}
+.rate .card{
+  width: 90%;
+  border:  solid #222831 ;
+  border: 0;
+}
+.rate .card .card-header{
+  background-color: #393E46;
+  color:white ;
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 2% 0;
+}
+
+.rate .card .card-body{
+background-color: #EEEEEE;
+  color: #222831;
+  text-decoration: bold;
+}
+
+
+.rate .card .card-title{
+  width: 90%;
+  font-size: 3rem;
+  font-weight: 500;
+  text-decoration: bold;
+}
+.rate .card p{
+font-weight: 500;
+color:#393E46;
+}
+
+.feedback-title {
+  font-family: "EB Garamond", serif;
+  font-size: 5rem;
+  font-weight: 500;
+  color: #393e46;
+  text-align: center;
 }
 
 #testimonials {
@@ -164,7 +214,6 @@ p {
 
 ::-webkit-scrollbar {
   display: none;
-
 }
 .test-card {
   width: 54rem;
@@ -177,30 +226,23 @@ p {
   font-weight: 400;
   font-size: 1rem;
 }
-
+.test-card img{
+  border-radius: 100%;
+  margin-right: 13px;
+}
 footer {
   justify-content: center;
   text-align: center;
-  padding: 50px;
+  padding: 2% 10%;
   background-color: #393e46;
   color: white;
-  height: 200px;
   width: 100%;
 }
-.big-heading {
-  color: white;
-}
 
-@media (max-width: 770px) {
-  .feature-box .icon {
-    height: 15rem;
-    width: 12rem;
-  }
-}
 
-@media onlyscreen and (min-width: 1024px) {
+/* @media onlyscreen and (min-width: 1024px) {
   .col-lg-3 {
     flex: 0 0 20%;
     max-width: 20%;
   }
-}
+} */
