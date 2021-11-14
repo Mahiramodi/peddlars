@@ -39,87 +39,92 @@ onAuthStateChanged(auth, async(user) => {
                 console.log(addRide.id);
                 setTimeout(() => {
 
+                    try {
+                        document.querySelector("#qr-reader__dashboard_section_csr").children[1].addEventListener("click", async() => {
+                            console.log(`${text} flag : ${flag}`);
+                            const rideInfo = await getDoc(doc(db, "Rides", addRide.id));
+                            console.log(document.querySelector("#qr-reader__dashboard_section_csr").children[1].innerText == "STOP SCANNING");
+                            if (document.querySelector("#qr-reader__dashboard_section_csr").children[1].innerText == "START SCANNING") {
+                                console.log(rideInfo.data().scan);
+                                if ((flag == false) && (text == "")) {
+                                    flag = true;
+                                    var hr = currentdate.getHours();
+                                    var min = currentdate.getMinutes();
+                                    if (min < 10) {
+                                        min = `${0}${min}`;
+                                    }
+                                    if (hr < 10) {
+                                        hr = `${0}${hr}`;
+                                    }
+                                    await updateDoc(doc(db, "Rides", addRide.id), {
+                                        scan: rideInfo.data().scan + 1,
+                                        starttime: `${hr}:${min}`,
+                                    });
 
-                    document.querySelector("#qr-reader__dashboard_section_csr").children[1].addEventListener("click", async() => {
-                        console.log(`${text} flag : ${flag}`);
-                        const rideInfo = await getDoc(doc(db, "Rides", addRide.id));
-                        console.log(document.querySelector("#qr-reader__dashboard_section_csr").children[1].innerText == "STOP SCANNING");
-                        if (document.querySelector("#qr-reader__dashboard_section_csr").children[1].innerText == "START SCANNING") {
-                            console.log(rideInfo.data().scan);
-                            if ((flag == false) && (text == "")) {
-                                flag = true;
-                                var hr = currentdate.getHours();
-                                var min = currentdate.getMinutes();
-                                if (min < 10) {
-                                    min = `${0}${min}`;
-                                }
-                                if (hr < 10) {
-                                    hr = `${0}${hr}`;
-                                }
-                                await updateDoc(doc(db, "Rides", addRide.id), {
-                                    scan: rideInfo.data().scan + 1,
-                                    starttime: `${hr}:${min}`,
-                                });
+                                    console.log("Start Ride")
+                                    console.log(rideInfo.data())
 
-                                console.log("Start Ride")
-                                console.log(rideInfo.data())
+                                } else if ((flag == true) && (text != "")) {
+                                    flag = false;
+                                    var hr = currentdate.getHours();
+                                    var min = currentdate.getMinutes();
+                                    if (min < 10) {
+                                        min = `${0}${min}`;
+                                    }
+                                    if (hr < 10) {
+                                        hr = `${0}${hr}`;
+                                    }
+                                    await updateDoc(doc(db, "Rides", addRide.id), {
 
-                            } else if ((flag == true) && (text != "")) {
-                                flag = false;
-                                var hr = currentdate.getHours();
-                                var min = currentdate.getMinutes();
-                                if (min < 10) {
-                                    min = `${0}${min}`;
-                                }
-                                if (hr < 10) {
-                                    hr = `${0}${hr}`;
-                                }
-                                await updateDoc(doc(db, "Rides", addRide.id), {
-
-                                    scan: rideInfo.data().scan + 1,
-                                    starttime: `${hr}:${min}`,
-                                })
-                                console.log("Mid Ride")
-                                console.log(rideInfo.data())
-                            } else if (rideInfo.data().scan > 1) {
-                                var date = new Date()
-                                var hr = date.getHours();
-                                var min = date.getMinutes();
-                                console.log(min)
-                                if (min < 10) {
-                                    min = `${0}${min}`;
-                                }
-                                if (hr < 10) {
-                                    hr = `${0}${hr}`;
-                                }
-                                var cost = 0;
-                                var rideDuration = diff(rideInfo.data().starttime, `${hr}:${min}`)
+                                        scan: rideInfo.data().scan + 1,
+                                        starttime: `${hr}:${min}`,
+                                    })
+                                    console.log("Mid Ride")
+                                    console.log(rideInfo.data())
+                                } else if (rideInfo.data().scan > 1) {
+                                    var date = new Date()
+                                    var hr = date.getHours();
+                                    var min = date.getMinutes();
+                                    console.log(min)
+                                    if (min < 10) {
+                                        min = `${0}${min}`;
+                                    }
+                                    if (hr < 10) {
+                                        hr = `${0}${hr}`;
+                                    }
+                                    var cost = 0;
+                                    var rideDuration = diff(rideInfo.data().starttime, `${hr}:${min}`)
 
 
-                                if (rideDuration >= 0.30 && rideDuration <= 1.30) {
-                                    cost = 60;
-                                } else if (rideDuration > 1.30 && rideDuration <= 3.0) {
-                                    cost = 100;
-                                } else if (rideDuration > 3.0 && rideDuration <= 5.30) {
-                                    cost = 200;
-                                } else if (rideDuration > 5.30 && rideDuration <= 8.0) {
-                                    cost = 300;
-                                }
-                                console.log(`${rideDuration} , ${cost}`);
-                                await updateDoc(doc(db, "Rides", addRide.id), {
+                                    if (rideDuration >= 0.30 && rideDuration <= 1.30) {
+                                        cost = 60;
+                                    } else if (rideDuration > 1.30 && rideDuration <= 3.0) {
+                                        cost = 100;
+                                    } else if (rideDuration > 3.0 && rideDuration <= 5.30) {
+                                        cost = 200;
+                                    } else if (rideDuration > 5.30 && rideDuration <= 8.0) {
+                                        cost = 300;
+                                    }
+                                    console.log(`${rideDuration} , ${cost}`);
+                                    await updateDoc(doc(db, "Rides", addRide.id), {
 
-                                    scan: rideInfo.data().scan + 1,
-                                    endtime: `${hr}:${min}`,
-                                    price: cost,
-                                })
-                                console.log("End Ride")
-                                console.log(rideInfo.data())
+                                        scan: rideInfo.data().scan + 1,
+                                        endtime: `${hr}:${min}`,
+                                        price: cost,
+                                    })
+                                    console.log("End Ride")
+                                    console.log(rideInfo.data())
+                                }
+                                if (rideInfo.data().scan > 2) {
+                                    document.getElementById("qr-reader").innerHTML = `<h3>Your total price of the ride is &#x20b9; ${rideInfo.data().price}</h3>`
+                                }
                             }
-                            if (rideInfo.data().scan > 2) {
-                                document.getElementById("qr-reader").innerHTML = `<h3>Your total price of the ride is &#x20b9; ${rideInfo.data().price}</h3>`
-                            }
-                        }
-                    })
+                        })
+                    } catch (err) {
+                        alert("Something went wrong. Please reload the site");
+                        window.location.replace("http://127.0.0.1:5500/peddlars/index.html")
+
+                    }
 
                 }, 2000)
 
