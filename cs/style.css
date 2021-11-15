@@ -174,7 +174,7 @@ body {
     flex-wrap: wrap;
     padding: 5% 3%;
     text-align: center;
-    background-color: #ff7517;
+    /* background-color: #ff7517; */
     /* transform: skewY(7deg);
     transform-origin: top right;
     margin: 0; */
@@ -184,10 +184,16 @@ body {
     width: 90%;
     border: solid #222831;
     border: 0;
+    background: linear-gradient(to top, #ff5f6d, #ffc371);
+    box-shadow: 0 20px 27px rgba(0, 0, 0, 0.151);
+}
+
+.rate .card:hover {
+    cursor: pointer;
 }
 
 .rate .card .card-header {
-    background-color: #393E46;
+    background-color: #e2bc89;
     color: white;
     font-size: 2rem;
     font-weight: 500;
@@ -195,7 +201,7 @@ body {
 }
 
 .rate .card .card-body {
-    background-color: #EEEEEE;
+    /* background-color: #EEEEEE; */
     color: #222831;
     text-decoration: bold;
 }
