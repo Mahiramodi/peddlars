@@ -14,8 +14,12 @@ onAuthStateChanged(auth, async(user) => {
         const read = await getDoc(getUser);
         // email1 = read.data().email;
         if (read.data().status != "clear") {
-            alert("Please clear your previous dues");
+
+            alert(`Please clear your previous dues INR ${read.data().dues}`);
             document.getElementById("qr-reader").style.display = "none";
+
+
+
         } else {
             const docRef = doc(db, "Users", user.email);
             const snap = await getDoc(docRef);
@@ -123,6 +127,7 @@ onAuthStateChanged(auth, async(user) => {
                     } catch (err) {
                         alert("Something went wrong. Please reload the site");
                         window.location.replace("http://127.0.0.1:5500/peddlars/index.html")
+
 
                     }
 
