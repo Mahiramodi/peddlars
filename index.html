@@ -27,7 +27,7 @@
 
 
 
-    <div class="container-fluid nav-section">
+    <div class="container-fluid nav-section" id="nav-section">
         <nav class="navbar navbar-expand-lg  navbar-dark">
 
             <a class="navbar-brand" href="">Pool Pedal</a>
@@ -39,12 +39,12 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item ">
-                        <a class="nav-link" href="#">Home </a>
+                        <a class="nav-link" href="#nav-section">Home </a>
                         <li class="nav-item ">
-                            <a class="nav-link" href="#">Working</a>
+                            <a class="nav-link" href="#steps">Working</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="#">Feedback</a>
+                            <a class="nav-link" href="#feedback">Feedback</a>
                         </li>
                 </ul>
             </div>
@@ -63,8 +63,8 @@
             </h1>
             <p>Pool Pedal is a premier bike rental and sharing service that provides a platform to rent a bike anywhere in college .You will save money, meet awesome people, and consume less</p>
             <div class="banner-btn">
-                <button type="button" class="btn btn-dark btn-lg download-button"><i class="fas fa-map-marker-alt"></i> Explore</button>
-                <button type="button" class="btn btn-dark btn-lg download-button"> Details <i class="fas fa-arrow-right"></i></button>
+                <button onclick="window.location.href='#maps'" type="button" class="btn btn-dark btn-lg download-button"><i class="fas fa-map-marker-alt"></i> Explore</button>
+                <button onclick="window.location.href='#rate'" type="button" class="btn btn-dark btn-lg download-button"> Details <i class="fas fa-arrow-right"></i></button>
             </div>
         </div>
 
@@ -74,7 +74,7 @@
 
 
 
-    <div class="steps row container-fluid">
+    <div class="steps row container-fluid" id="steps">
 
 
         <div class="steps-text col-lg-4 col-sm-12">
@@ -84,7 +84,7 @@
         <div class="steps-ill row col-lg-8 col-sm-12">
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="card">
-                    <img src="images/Reading list-rafiki.png" class="card-img-top" alt="...">
+                    <img src="images/read.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h2 class="card-title">Pool Plan</h2>
                         <div class="num">
@@ -114,7 +114,7 @@
 
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="card">
-                    <img src="images/Loc.png" class="card-img-top" alt="...">
+                    <img src="images/Location tracking-pana.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h2 class="card-title">Map </h2>
                         <div class="num">
@@ -145,16 +145,16 @@
     </div>
     </section>
     <!-- rate cards -->
-    <h1 class="feedback-title">Our Prices</h1>
+    <h1  id="rate" class="feedback-title">Our Prices</h1>
     <div class="rate row">
 
         <div class="col-lg-3 col-md-6 col-sm-12">
             <div class="card text-white mb-3" data-tilt data-tilt-glare="true">
                 <div class="card-header">Silver Pool</div>
                 <div class="card-body">
-                    <h5 class="card-title">One Hour</h5>
-                    <p class="card-text">Unlimited Matches</p>
-                    <p>Unlimited Messages</p>
+                    <h5 class="card-title">Half Hour</h5>
+                    <p class="card-text">FREE</p>
+                   <p>Limited Rides</p>
                     <p>Unlimited App Usage</p>
                 </div>
             </div>
@@ -163,9 +163,9 @@
             <div class="card text-white bg-primary mb-3" data-tilt data-tilt-glare="true">
                 <div class="card-header">Golden Pool</div>
                 <div class="card-body">
-                    <h5 class="card-title">Two Hours</h5>
-                    <p class="card-text">Unlimited Matches</p>
-                    <p>Unlimited Messages</p>
+                    <h5 class="card-title">1.5 Hours</h5>
+                    <h5 class="card-text">₹ 60</h5>
+                    <p>Unlimited Rides</p>
                     <p>Unlimited App Usage</p>
                 </div>
             </div>
@@ -174,9 +174,9 @@
             <div class="card text-white mb-3" data-tilt data-tilt-glare="true">
                 <div class="card-header">Diamond Pool</div>
                 <div class="card-body">
-                    <h5 class="card-title">Six Hours</h5>
-                    <p class="card-text">Unlimited Matches</p>
-                    <p>Unlimited Messages</p>
+                    <h5 class="card-title">3  Hours</h5>
+                    <h5 class="card-text">₹ 100</h5>
+                    <p>Unlimited Rides</p>
                     <p>Unlimited App Usage</p>
                 </div>
             </div>
@@ -185,9 +185,9 @@
             <div class="card text-white mb-3" data-tilt data-tilt-glare="true">
                 <div class="card-header">Platinum Pool</div>
                 <div class="card-body">
-                    <h5 class="card-title">Nine Hours</h5>
-                    <p class="card-text">Unlimited Matches</p>
-                    <p>Unlimited Messages</p>
+                    <h5 class="card-title">5.5 Hours</h5>
+                    <h5 class="card-text">₹ 200</h5>
+                    <p>Unlimited Rides</p>
                     <p>Unlimited App Usage</p>
                 </div>
             </div>
@@ -199,7 +199,7 @@
 
     <!-- feedback -->
 
-    <h1 class="feedback-title">
+    <h1 class="feedback-title" id="feedback">
         What clients say about us
     </h1>
     <section class="feedback-section" id="testimonials">
@@ -207,33 +207,34 @@
     I have lost calories and my wallet had gained coins. -->
 
         <div class="test-card">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, ut neque excepturi, dolor doloremque minus tempore officia tenetur in mollitia eum architecto quam cupiditate ab!</p>
-            <div class="line" style="display: flex;justify-content: center;align-items: center;">
-                <img src="images/lady-img.jpg" alt="" style="height: 50px;width:50px;">
+            <p>This is a belated HUGE thank you from myself and my friends to you .Our trip went brilliantly, thanks in no small way to your friendliness helpfulness and professionalism. We look forward to doing business with you again in the future.</p> 
+           <div class="line" style="display: flex;justify-content: center;align-items: center;">
+                <img src="images/manfee.png" alt="" style="height: 50px;width:50px;">
                 <h5>Jay Thakur</h5>
             </div>
         </div>
         <div class="test-card">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, ut neque excepturi, dolor doloremque minus tempore officia tenetur in mollitia eum architecto quam cupiditate ab!</p>
+            <p>Arrival on time, Bike was new and in very good shape, selected trial couldn't be better, places we visited were great, my best recommendation for the experience.</p>
             <div class="line" style="display: flex;justify-content: center;align-items: center;">
-                <img src="images/lady-img.jpg" alt="" style="height: 50px;width:50px;">
-                <h5>Jay Thakur</h5>
+                <img src="images/lady2.png" alt="" style="height: 50px;width:50px;">
+                <h5>Riya Sethi</h5>
             </div>
         </div>
         <div class="test-card">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, ut neque excepturi, dolor doloremque minus tempore officia tenetur in mollitia eum architecto quam cupiditate ab!</p>
+            <p>Thanks again for all the help pulling together the bike ride. You were key to making it happen, and resulted in a nice holiday for me. It was a wonderful ride...Thanks again!
+            </p>
             <div class="line" style="display: flex;justify-content: center;align-items: center;">
                 <img src="images/lady-img.jpg" alt="" style="height: 50px;width:50px;">
-                <h5>Jay Thakur</h5>
+                <h5>Anaya Singla</h5>
             </div>
         </div>
 
     </section>
 
-    <section class="mapQR">
+    <section class="mapQR" id="maps">
         <div id="map"></div>
         <div class="Qrtxt">
-            <h2>Wana Start Your Ride ? </h2>
+            <h2>Wanna Start Your Ride ? </h2>
             <!-- Button trigger modal -->
             <button type="button" class="btn" id="strbtn" data-toggle="modal" data-target="#exampleModalCenter">
                 Let's Start!
