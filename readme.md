@@ -9,7 +9,7 @@ Smartphones.</p>
   <li>Register User </li>
   <li>Login In </li>
   <li>Clear your previous dues if any! </li>
-  <li>Scan the Qr Code to unlock the bicycle QcQ</li>
+  <li>Scan the Qr Code to unlock the bicycle</li>
   <li>Enjoy your ride!!🚴‍♂️ </li>
 </ol>  
 
